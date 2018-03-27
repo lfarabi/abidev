@@ -33,5 +33,8 @@ pipeline {
 	stage('deploy to dev') {
             steps {
                 build job: 'luthfi.farabi/deploy-abi-demo-app', parameters: [[$class: 'StringParameterValue', name: 'BUILD_NUMBER', value: "${env.BUILD_NUMBER}"]], wait: false
-      }
+            }
+        }
+  
+    }
 }
