@@ -13,7 +13,7 @@ const search = () => {
       numFound: 2,
       docs: [
         {
-          documentid: '6000011',
+          documentid: '6100011',
           channels: 'buy',
           price: 2500000,
           currency: 'IDR'
