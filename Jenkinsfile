@@ -30,5 +30,8 @@ pipeline {
                 sh "docker rmi 538471682716.dkr.ecr.ap-southeast-1.amazonaws.com/abi-app-demo:${env.BUILD_NUMBER}"
             }
         }
+	stage('deploy to dev') {
+            steps {
+                build job: 'luthfi.farabi/deploy-abi-demo-app', parameters: [[$class: 'StringParameterValue', name: 'BUILD_NUMBER', value: "${env.BUILD_NUMBER}"]], wait: false
       }
 }
